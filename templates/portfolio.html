@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--
+	Big Picture by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Portfolio</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://d33wubrfki0l68.cloudfront.net/bundles/6e9fb2414d121234c1c0a8d49f884661f40d5da2.css"
+      rel="stylesheet"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" href="static/assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="static/assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Header -->
+    <header id="header">
+      <h1>
+        <a href="{{ url_for('home') }}"
+          >KHOA NGUYEN: PYTHON & MACHINE LEARNING DEVELOPER</a
+        >
+      </h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="{{ url_for('home')+'#intro' }}"><strong>Intro</strong></a>
+          </li>
+          <li>
+            <a href="{{ url_for('home')+'#one' }}"><strong>Who I Am</strong></a>
+          </li>
+          <li>
+            <a href="{{ url_for('home')+'#two' }}"
+              ><strong>What I Do</strong></a
+            >
+          </li>
+          <li>
+            <a href="{{ url_for('home')+'#work' }}"><strong>My Work</strong></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Work -->
+    <section class="portfolio_details_area section_gap">
+      <div class="container">
+        <div class="h1 text-center">
+          <p>Data Science Projects</p>
+        </div>
+        <div class="portfolio_details_inner">
+          <div class="row">
+            <div class="offset-md-1 col-md-6">
+              <div class="portfolio_right_text mt-30">
+                <h4>Anomaly Detection of Industrial Equipment</h4>
+                <p>
+                  Acquired SCADA data of industrial equipment from Azure Blob
+                  Storage then run a pipeline to train model to detect anomalies
+                  for predictive maintenance using One-Class Classification
+                  (Isolation Forest)
+                </p>
+                <ul class="list">
+                  <li>
+                    <span>Tools used</span>: Python, Azure ML, Scikit-learn
+                  </li>
+                  <li>
+                    <span>Category</span>: Clasification, Anomaly Detection
+                  </li>
+                  <li><span>Year</span>: Jan - Apr 2023</li>
+                </ul>
+                <ul class="list social_details">
+                  <li>
+                    <a
+                      href="https://github.com/NguyenHuuDangKhoa/anomalyDetection"
+                      target="_blank"
+                      ><i
+                        class="icon brands fa-github"
+                        style="font-size: 24px"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="left_img">
+                <a href="https://github.com/NguyenHuuDangKhoa/anomalyDetection"
+                  ><img
+                    class="img-fluid"
+                    src="static/images/fulls/predictive-maintenance.png"
+                    alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <!-- Icons -->
+      <ul class="icons">
+        <li>
+          <a href="#" class="icon brands fa-github"
+            ><span class="label">GitHub</span></a
+          >
+        </li>
+        <li>
+          <a href="#" class="icon brands fa-linkedin-in"
+            ><span class="label">LinkedIn</span></a
+          >
+        </li>
+      </ul>
+
+      <!-- Menu -->
+      <ul class="menu">
+        <li>&copy; HTML5 UP</li>
+        <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+      </ul>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="static/assets/js/jquery.min.js"></script>
+    <script src="static/assets/js/jquery.poptrox.min.js"></script>
+    <script src="static/assets/js/jquery.scrolly.min.js"></script>
+    <script src="static/assets/js/jquery.scrollex.min.js"></script>
+    <script src="static/assets/js/browser.min.js"></script>
+    <script src="static/assets/js/breakpoints.min.js"></script>
+    <script src="static/assets/js/util.js"></script>
+    <script src="static/assets/js/main.js"></script>
+  </body>
+</html>
