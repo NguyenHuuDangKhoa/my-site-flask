@@ -21,7 +21,7 @@
     <!-- Header -->
     <header id="header">
       <h1><a href="{{ url_for('home') }}"
-        >KHOA NGUYEN: PYTHON & MACHINE LEARNING DEVELOPER</a
+        >KHOA NGUYEN</a
       ></h1>
       <nav>
         <ul>
@@ -170,14 +170,18 @@
     <section id="contact" class="main style3 secondary">
       <div class="content">
         <header>
+          {% if msg_sent:  %}
+          <h2>SUCCESSFULLY SENT YOUR MESSAGE</h2>
+          {% else: %}
           <h2>WANT TO CONNECT?</h2>
+          {% endif %}
           <p>
             I would love to have a quick chat with you! <br />
             You can find me on LinkedIn or send me an email by the form below.
           </p>
         </header>
         <div class="box">
-          <form method="post" action="#">
+          <form method="post" action={{ url_for("contact") }}>
             <div class="fields">
               <div class="field half">
                 <input type="text" name="name" placeholder="Name" />
@@ -233,5 +237,13 @@
     <script src="static/assets/js/breakpoints.min.js"></script>
     <script src="static/assets/js/util.js"></script>
     <script src="static/assets/js/main.js"></script>
+    {% if section_id %}
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+      var targetSection = document.getElementById('{{ section_id }}');
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+      });
+    </script>
+    {% endif %}
   </body>
 </html>
